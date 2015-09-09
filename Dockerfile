@@ -1,7 +1,7 @@
-FROM centos:6.6
+FROM gpmidi/centos-6.3
 
 # Install EPL
-ADD http://dl.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm .
+ADD http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm .
 RUN rpm -i --quiet epel-release-6-8.noarch.rpm
 
 # Install prerequisites
