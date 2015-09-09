@@ -3,6 +3,7 @@ FROM gpmidi/centos-6.3
 # Install EPL
 ADD http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm .
 RUN rpm -i --quiet epel-release-6-8.noarch.rpm
+RUN yum upgrade ca-certificates --disablerepo=epel
 
 # Install prerequisites
 RUN yum install -y --quiet wget clang gcc gcc-c++ git scons redhat-lsb kernel-devel dkms cmake doxygen
