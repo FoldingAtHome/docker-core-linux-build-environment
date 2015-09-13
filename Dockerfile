@@ -30,9 +30,3 @@ ENV OPENSSL_HOME=$HOME/openssl-1.0.2d
 RUN wget https://www.openssl.org/source/openssl-1.0.2d.tar.gz
 RUN tar zxf openssl-1.0.2d.tar.gz
 RUN cd openssl-1.0.2d ; ./config no-shared ; make
-
-# Build cbang
-ENV CBANG_HOME=$HOME/cbang
-RUN git clone --depth=1 https://github.com/CauldronDevelopmentLLC/cbang.git
-RUN scons -C cbang
-
